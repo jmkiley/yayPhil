@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,11 +18,28 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhilKessel.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="zpy-4G-h5i"/>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zpy-4G-h5i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="161.5" id="Mcw-M7-0iu"/>
+                            <constraint firstItem="zpy-4G-h5i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OLP-Zu-4w9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zpy-4G-h5i" secondAttribute="bottom" constant="57" id="a9Q-1I-bUT"/>
+                            <constraint firstItem="zpy-4G-h5i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="pYc-AT-RDm"/>
+                            <constraint firstItem="zpy-4G-h5i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="360" id="yYP-wc-Tbm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="philPicture" destination="zpy-4G-h5i" id="uQl-nK-1R1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PhilKessel.JPG" width="754" height="599"/>
+    </resources>
 </document>

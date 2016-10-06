@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0FC3BA1DA6E51700297488 /* PhilKessel.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 3E0FC3B91DA6E51700297488 /* PhilKessel.JPG */; };
 		3ECF718E1D9C07B60079ACAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF718D1D9C07B60079ACAA /* AppDelegate.swift */; };
 		3ECF71901D9C07B60079ACAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECF718F1D9C07B60079ACAA /* ViewController.swift */; };
 		3ECF71931D9C07B60079ACAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ECF71911D9C07B60079ACAA /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E0FC3B91DA6E51700297488 /* PhilKessel.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PhilKessel.JPG; sourceTree = "<group>"; };
 		3ECF718A1D9C07B60079ACAA /* yayPhil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yayPhil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECF718D1D9C07B60079ACAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ECF718F1D9C07B60079ACAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		3ECF718C1D9C07B60079ACAA /* yayPhil */ = {
 			isa = PBXGroup;
 			children = (
+				3E0FC3B91DA6E51700297488 /* PhilKessel.JPG */,
 				3ECF718D1D9C07B60079ACAA /* AppDelegate.swift */,
 				3ECF718F1D9C07B60079ACAA /* ViewController.swift */,
 				3ECF71911D9C07B60079ACAA /* Main.storyboard */,
@@ -236,6 +239,7 @@
 				3ECF71981D9C07B60079ACAA /* LaunchScreen.storyboard in Resources */,
 				3ECF71951D9C07B60079ACAA /* Assets.xcassets in Resources */,
 				3ECF71931D9C07B60079ACAA /* Main.storyboard in Resources */,
+				3E0FC3BA1DA6E51700297488 /* PhilKessel.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +512,7 @@
 				3ECF71B41D9C07B60079ACAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3ECF71B51D9C07B60079ACAA /* Build configuration list for PBXNativeTarget "yayPhilTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +521,7 @@
 				3ECF71B71D9C07B60079ACAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3ECF71B81D9C07B60079ACAA /* Build configuration list for PBXNativeTarget "yayPhilUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +530,7 @@
 				3ECF71BA1D9C07B60079ACAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
