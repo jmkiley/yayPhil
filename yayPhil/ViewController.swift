@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import Foundation
+import UserNotifications
+import UserNotificationsUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UNUserNotificationCenterDelegate {
 
     @IBOutlet weak var philPicture: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        self.apiCall()
+
         createTextLabel()
-//        thePhilsImage()
+        dailyReminder()
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+//        center.
+        center.requestAuthorization(options: .alert) { (granted, error) in
+            if granted {
+                print("YAY!")
+            } else {
+            print(error)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,10 +37,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func thePhilsImage() {
-        philPicture.image = UIImage(contentsOfFile: "PhilKessel.JPG")
-        view.addSubview(philPicture)
-    }
     
     func createTextLabel() {
         
@@ -45,13 +54,35 @@ class ViewController: UIViewController {
     
     
     func getDate() -> String {
-//        let dateAsDate = Date()
-//        
+     
         let formatter = DateFormatter()
         formatter.dateFormat = "MMMM dd, yyyy"
         let dateAsString = formatter.string(from: Date())
 
         return dateAsString
+    }
+    
+    func dailyReminder() {
+        let content = reminderText()
+        let trigger = reminderTrigger()
+        let notif = UNNotificationRequest.init(identifier: "alert", content: content, trigger: trigger)
+        let center = UNUserNotificationCenter.current()
+        center.add(notif) { (error) in
+            print(error)
+        }
+        
+    }
+    
+    func reminderText() -> UNNotificationContent {
+        
+        let date = getDate()
+        let content = UNMutableNotificationContent()
+        content.body = "Today is \(date) and Phil Kessel is a Pittsburgh Penguin!"
+        return content
+    }
+    
+    func reminderTrigger() -> UNTimeIntervalNotificationTrigger {
+        return UNTimeIntervalNotificationTrigger.init(timeInterval: (60), repeats: true)
     }
 
 }
