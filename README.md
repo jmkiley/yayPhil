@@ -11,6 +11,9 @@ Currently:
 To Do:
 - Make the UI nice
 
+Known Bug:
+- Need to update the date while the app is running in the background. Currently showing the last date the app was opened
+
 Stretch goals:
 - Embed a tweet (Using the Twitter API)
 - Integrate stats (pending API availability)
