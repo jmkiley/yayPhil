@@ -6,9 +6,12 @@ Currently:
 - Displays date
 - Says that Phil Kessel is a Pittsburgh Penguin
 - Displays an image
+- Add a daily local notification (in the current code it happens MUCH more frequently for testing purposes)
 
 To Do:
-- Add a daily local notification
+- Make the UI nice
+
+Stretch goals:
 - Embed a tweet (Using the Twitter API)
 - Integrate stats (pending API availability)
 - Add alerts when Phil gets a point (pending data availability)
