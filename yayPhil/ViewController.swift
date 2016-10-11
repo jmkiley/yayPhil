@@ -17,7 +17,10 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
+        philPicture.layer.cornerRadius = philPicture.frame.size.width / 2
+        philPicture.clipsToBounds = true
+        
         createTextLabel()
         dailyReminder()
         let center = UNUserNotificationCenter.current()
@@ -46,8 +49,9 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         label.text = "Today is\n\(date) and \nPhil Kessel \nis a\nPittsburgh Penguin"
         label.textAlignment = .center
         label.textColor = UIColor(red:1.00, green:0.84, blue:0.00, alpha:1.0)
-
-        label.font = UIFont.boldSystemFont(ofSize: 20.0)
+        
+        label.font = UIFont(name: "Superclarendon-Bold", size: 20.0)
+//        label.font.
         label.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 1, alpha: 0)
 //        label.font = UIFont.
     }
@@ -82,7 +86,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     }
     
     func reminderTrigger() -> UNTimeIntervalNotificationTrigger {
-        return UNTimeIntervalNotificationTrigger.init(timeInterval: (60), repeats: true)
+        return UNTimeIntervalNotificationTrigger.init(timeInterval: (60*60*60*24), repeats: true)
     }
 
 }

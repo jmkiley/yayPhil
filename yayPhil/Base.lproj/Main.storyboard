@@ -19,15 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhilKessel.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="zpy-4G-h5i"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phil's ring.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zpy-4G-h5i"/>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.93494324747352131" green="0.95568192001182195" blue="0.97429237565445026" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="zpy-4G-h5i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="161.5" id="Mcw-M7-0iu"/>
+                            <constraint firstItem="zpy-4G-h5i" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="198.5" id="Mcw-M7-0iu"/>
                             <constraint firstItem="zpy-4G-h5i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OLP-Zu-4w9"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zpy-4G-h5i" secondAttribute="bottom" constant="57" id="a9Q-1I-bUT"/>
-                            <constraint firstItem="zpy-4G-h5i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="pYc-AT-RDm"/>
-                            <constraint firstItem="zpy-4G-h5i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="360" id="yYP-wc-Tbm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zpy-4G-h5i" secondAttribute="bottom" constant="20" id="a9Q-1I-bUT"/>
+                            <constraint firstItem="zpy-4G-h5i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="65" id="pYc-AT-RDm"/>
+                            <constraint firstItem="zpy-4G-h5i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="397" id="yYP-wc-Tbm"/>
                         </constraints>
                     </view>
                     <connections>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PhilKessel.JPG" width="754" height="599"/>
+        <image name="phil's ring.jpg" width="900" height="1200"/>
     </resources>
 </document>
