@@ -10,36 +10,32 @@ import UIKit
 import Foundation
 import UserNotifications
 import UserNotificationsUI
+import WebKit
 
-class ViewController: UIViewController, UNUserNotificationCenterDelegate {
-
-    @IBOutlet weak var philPicture: UIImageView!
+class ViewController: UIViewController, UNUserNotificationCenterDelegate, WKNavigationDelegate {
+    
+//    @IBOutlet weak var philPicture: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        philPicture.layer.cornerRadius = philPicture.frame.size.width / 2
-        philPicture.clipsToBounds = true
+//        philPicture.layer.cornerRadius = philPicture.frame.size.width / 2
+//        philPicture.clipsToBounds = true
+//        statsView()
         
         createTextLabel()
         dailyReminder()
-        let center = UNUserNotificationCenter.current()
-        center.delegate = self
-//        center.
-        center.requestAuthorization(options: .alert) { (granted, error) in
-            if granted {
-                print("YAY!")
-            } else {
-            print(error)
+        
             }
-        }
-    }
 
+    override func viewWillAppear(_ animated: Bool) {
+//        statsView()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     func createTextLabel() {
         
@@ -51,11 +47,8 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         label.textColor = UIColor(red:1.00, green:0.84, blue:0.00, alpha:1.0)
         
         label.font = UIFont(name: "Superclarendon-Bold", size: 20.0)
-//        label.font.
         label.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 1, alpha: 0)
-//        label.font = UIFont.
     }
-    
     
     func getDate() -> String {
      
@@ -67,6 +60,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     }
     
     func dailyReminder() {
+        
         let content = reminderText()
         let trigger = reminderTrigger()
         let notif = UNNotificationRequest.init(identifier: "alert", content: content, trigger: trigger)
@@ -74,7 +68,6 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
         center.add(notif) { (error) in
             print(error)
         }
-        
     }
     
     func reminderText() -> UNNotificationContent {
@@ -86,7 +79,7 @@ class ViewController: UIViewController, UNUserNotificationCenterDelegate {
     }
     
     func reminderTrigger() -> UNTimeIntervalNotificationTrigger {
-        return UNTimeIntervalNotificationTrigger.init(timeInterval: (60*60*60*24), repeats: true)
+        return UNTimeIntervalNotificationTrigger.init(timeInterval: (60), repeats: true)
     }
 
 }
